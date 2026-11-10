@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELORA STORE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>VELORA STORE</h2>
+    <input type="text" id="search" placeholder="Cari produk...">
+    <button onclick="openKeranjang()">🛒 Keranjang: <span id="cart">0</span></button>
+</header>
+
+<section class="hero">
+    <h1>WELCOME TO VELORA STORE</h1>
+    <p>Temukan produk favoritmu dengan harga terbaik!</p>
+</section>
+
+<h2 class="judul">KATALOG PRODUK</h2>
+
+<div class="kategori">
+    <button onclick="filter('all')">Semua</button>
+    <button onclick="filter('elektronik')">Elektronik</button>
+    <button onclick="filter('fashion')">Fashion</button>
+    <button onclick="filter('aksesoris')">Aksesoris</button>
+</div>
+<div class="modal" id="modal">
+    <div class="isi-modal">
+        <h2>KERANJANG BELANJA</h2>
+        <div id="daftar"></div>
+        <h3 id="total">Total: Rp 0</h3>
+        <button onclick="checkout()">CHECKOUT</button>
+        <button onclick="closeKeranjang()">TUTUP</button>
+    </div>
+</div>
+
+<section class="produk" id="produk"></section>
+
+<script src="script.js"></script>
+</body>
+</html>
